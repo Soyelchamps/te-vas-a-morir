@@ -2,7 +2,7 @@ import moment from "moment";
 import React, { useState, useEffect } from "react";
 
 function LifeExpectancyCounter() {
-  const [birthDate, setBirthDate] = useState(new Date("1993-10-22"));
+  const [birthDate, setBirthDate] = useState(new Date("1987-01-26"));
   const [lifeExpectancy, setLifeExpectancy] = useState("");
 
   function calculateLifeExpectancy(bday) {
@@ -42,9 +42,14 @@ function LifeExpectancyCounter() {
       </label>
       <br />
 
-      <p>Tiempo estimado de vida restante: {lifeExpectancy} segundos.</p>
+      <p>Tiempo estimado de vida restante: {lifeExpectancy} seg.</p>
+      <p className="text-xs mt-3">
+        La vida es corta es momento de vivirla, escribe debajo tus mas grandes
+        sueños. Te vas a morir y no puedes hacer nada al respecto sobre eso.
+        Pero si puedes actuar hoy mismo, conquistado tus mas grandes metas.
+      </p>
     </div>
   );
 }
-//
+
 export default LifeExpectancyCounter;

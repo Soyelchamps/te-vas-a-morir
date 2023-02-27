@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Credits } from "./components/Credits";
 import LifeExpectancyCounter from "./components/LifeExpectancyCounter/LifeExpectancyCounter";
 import { Title } from "./components/Title/Title";
 import { TodoInput } from "./components/Todoinput";
@@ -97,6 +98,7 @@ function App() {
           handleDelete={handleDelete}
           handleClearComplete={handleClearComplete}
         />
+        <Credits />
       </div>
     </div>
   );
