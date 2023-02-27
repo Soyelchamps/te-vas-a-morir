@@ -1,16 +1,16 @@
-import { now } from "moment";
+import moment from "moment";
 import React, { useState, useEffect } from "react";
 
 function LifeExpectancyCounter() {
   const [birthDate, setBirthDate] = useState(new Date("1993-10-22"));
-  const [lifeExpectancy, setLifeExpectancy] = useState(0);
+  const [lifeExpectancy, setLifeExpectancy] = useState("");
 
-  function calculateLifeExpectancy() {
+  function calculateLifeExpectancy(bday) {
     // Calcula el tiempo estimado de vida restante en segundos.
     // Puedes usar una esperanza de vida promedio para tu país o región.
     const averageLifeExpectancy = 78; // Ejemplo para una esperanza de vida de 78 años
     const now = new Date();
-    const ageInMilliseconds = now.getTime() - birthDate.getTime();
+    const ageInMilliseconds = now.getTime() - bday;
     const ageInSeconds = ageInMilliseconds / 1000;
     const remainingLifeInSeconds = Math.round(
       averageLifeExpectancy * 365 * 24 * 60 * 60 - ageInSeconds
@@ -20,11 +20,11 @@ function LifeExpectancyCounter() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      calculateLifeExpectancy();
-      console.log(lifeExpectancy);
+      calculateLifeExpectancy(birthDate.getTime());
     }, 1000);
+
     return () => clearInterval(interval);
-  }, []);
+  }, [birthDate]);
 
   return (
     <div>
@@ -32,8 +32,12 @@ function LifeExpectancyCounter() {
         Fecha de Nacimiento:
         <input
           type="date"
-          value={birthDate}
-          onChange={(event) => setBirthDate(new Date(event.target.value))}
+          class="flex items-center justify-between p-4 bg-gray-700 border-b border-solid border-gray-600"
+          value={moment(birthDate).format("YYYY-MM-DD")}
+          onChange={(event) => {
+            const val = event.target.value.split("-");
+            setBirthDate(new Date(val[0] * 1, val[1] * 1 - 1, val[2] * 1));
+          }}
         />
       </label>
       <br />
@@ -42,5 +46,5 @@ function LifeExpectancyCounter() {
     </div>
   );
 }
-
+//
 export default LifeExpectancyCounter;
