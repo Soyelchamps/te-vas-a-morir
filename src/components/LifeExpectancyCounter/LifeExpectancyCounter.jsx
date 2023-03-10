@@ -15,7 +15,29 @@ function LifeExpectancyCounter() {
     const remainingLifeInSeconds = Math.round(
       averageLifeExpectancy * 365 * 24 * 60 * 60 - ageInSeconds
     );
+    //const remainingLifeInSeconds = Math.round(averageLifeExpectancy);
     setLifeExpectancy(remainingLifeInSeconds);
+  }
+
+  function secondsToString(seconds) {
+    const numyears = Math.floor(seconds / 31556926);
+    const numdays = Math.floor((seconds % 31556926) / 86400);
+    const numhours = Math.floor((seconds % 86400) / 3600);
+    const numminutes = Math.floor(((seconds % 86400) % 3600) / 60);
+    const numseconds = ((seconds % 86400) % 3600) % 60;
+
+    return (
+      numyears +
+      " años " +
+      numdays +
+      " dias " +
+      numhours +
+      " horas " +
+      numminutes +
+      " minutos " +
+      numseconds +
+      " segundos"
+    );
   }
 
   useEffect(() => {
@@ -42,7 +64,8 @@ function LifeExpectancyCounter() {
       </label>
       <br />
 
-      <p>Tiempo estimado de vida restante: {lifeExpectancy} seg.</p>
+      <p>Tiempo estimado de vida restante: </p>
+      <p> {secondsToString(lifeExpectancy)}</p>
       <p className="text-xs mt-3">
         La vida es corta es momento de vivirla, escribe debajo tus mas grandes
         sueños. Te vas a morir y no puedes hacer nada al respecto sobre eso.
