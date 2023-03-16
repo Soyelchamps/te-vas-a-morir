@@ -8,7 +8,7 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "Resolver el problema del agua",
+      title: "Resolver el problema de la escasez del agua",
       completed: false,
     },
     {
