@@ -8,17 +8,17 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "Correr el maraton en Boston",
+      title: "Resolver el problema del agua",
       completed: false,
     },
     {
       id: 2,
-      title: "Conocer colombia",
+      title: "Inspirar otras personas a ser la mejor version de si mismos.",
       completed: false,
     },
     {
       id: 3,
-      title: "Comprar un Mazda MX5",
+      title: "Hacer sentir a mi mama orgullosa de mi",
       completed: false,
     },
     {
