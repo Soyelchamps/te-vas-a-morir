@@ -36,7 +36,7 @@ function LifeExpectancyCounter() {
       numminutes +
       " minutos " +
       numseconds +
-      " segundos"
+      "  seg"
     );
   }
 
