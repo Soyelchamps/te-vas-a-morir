@@ -20,17 +20,17 @@ const TodoFilters = ({
         <FilterButton
           action={() => showAllTodos()}
           active={activeFilter}
-          filter="All"
+          filter="Todos"
         />
         <FilterButton
           action={() => showActiveTodos()}
           active={activeFilter}
-          filter="Actvie"
+          filter="Por realizar"
         />
         <FilterButton
           action={() => showCompletedTodos()}
           active={activeFilter}
-          filter="Complete"
+          filter="Completados"
         />
       </FilterButtonContainer>
       <button
