@@ -20,24 +20,24 @@ const TodoFilters = ({
         <FilterButton
           action={() => showAllTodos()}
           active={activeFilter}
-          filter="Todos"
+          filter=" Todos "
         />
         <FilterButton
           action={() => showActiveTodos()}
           active={activeFilter}
-          filter="Por realizar"
+          filter=" PorRealizar "
         />
         <FilterButton
           action={() => showCompletedTodos()}
           active={activeFilter}
-          filter="Completados"
+          filter=" Completados "
         />
       </FilterButtonContainer>
       <button
         onClick={() => handleClearComplete()}
         className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300 ease-in"
       >
-        Clear Completed
+        Limpieza completa
       </button>
     </FiltersContainer>
   );

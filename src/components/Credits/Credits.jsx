@@ -5,15 +5,10 @@ const Credits = () => {
         <img src="/linkedin.svg" alt="LinkedIn" />
       </a>
       <div className="mt-4 text-center ">
-        <h5>Carlos Diaz</h5>
-        <h6>Web developer and Experience creator</h6>
+        <p className="text-sm">Creado por:</p>
+        <p className="text-lg text-cyan-500 font-sans">Carlos Diaz</p>
+        <p className="text-sm">Web developer and Experience creator</p>
       </div>
-      {/* <a href="https://github.com/Soyelchamps/">
-        <video autoplay loop muted>
-          <source src="/github-gif.gif" type="video/gif" />
-        </video>
-      </a> */}
-
       <a href="https://github.com/Soyelchamps/">
         <img src="/github.svg" alt="Github" />
       </a>

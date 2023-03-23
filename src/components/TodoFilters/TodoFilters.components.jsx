@@ -7,7 +7,7 @@ const FiltersContainer = ({ children }) => {
 };
 
 const ItemsLeft = ({ total = 0 }) => {
-  return <p className="text-gray-400 text-sm">{total} Metas por realizar</p>;
+  return <p className="text-purple-200 text-sm">{total} Metas por realizar</p>;
 };
 
 const FilterButtonContainer = ({ children }) => {

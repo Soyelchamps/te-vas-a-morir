@@ -64,13 +64,8 @@ function LifeExpectancyCounter() {
       </label>
       <br />
 
-      <p>Tiempo estimado de vida restante: </p>
       <p> {secondsToString(lifeExpectancy)}</p>
-      <p className="text-xs mt-3">
-        La vida es corta es momento de vivirla, escribe debajo tus mas grandes
-        sueños. Te vas a morir y no puedes hacer nada al respecto sobre eso.
-        Pero si puedes actuar hoy mismo, conquistado tus mas grandes metas.
-      </p>
+      <p>Tiempo estimado para lograr tus metas</p>
     </div>
   );
 }
